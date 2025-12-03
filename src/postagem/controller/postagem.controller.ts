@@ -25,7 +25,7 @@ export class PostagemController {
         return this.postagemService.findAllByTitulo(titulo);
     }
 
-    @Post() // Cadastrar/Criar/Salva informação
+    @Post() // Cadastrar/Criar/Salva
     @HttpCode(HttpStatus.CREATED) // 201
     create(@Body() postagem: Postagem): Promise<Postagem> {
         return this.postagemService.create(postagem);
